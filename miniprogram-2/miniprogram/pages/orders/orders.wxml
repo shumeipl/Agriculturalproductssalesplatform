@@ -1,0 +1,55 @@
+<!--pages/orders/orders.wxml-->
+<view class="box">
+  <view class="address-box">
+    <view bindtap="addAddress" class="add-address" wx:if="{{!address}}">添加收货地址></view>
+      <view class="user-imformation" wx:if="{{address}}">
+        <view>
+          <view class="name-phone">
+            <text class="name">提货人：{{name}}</text>
+            <text>{{phone}}</text>
+          </view>
+          <view class="address-detail">{{address}}</view>
+        </view>
+        <view bindtap="addAddress">></view>
+    </view>  
+  </view>
+
+
+<!--订单信息-->
+<!--商品列表-->
+
+  <view class="order-box">
+    <block wx:for="{{orderList}}">
+    <view class="one-order">
+      <image class="good-img" style="width: 200rpx;height: 200rpx;margin-top: 25rpx;" src="{{item.product_faceImg}}"></image>
+      <view class="good-imformation">
+        <view class="imformation-top">{{item.product_name}}</view>
+        <view class="imformation-buttom">
+          <view>￥{{item.product_price}}</view>
+          <view class="imformation-buttom-right">
+            <view>共{{item.product_number}}件</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    </block>
+    </view>
+<view class="order-details">
+<view class="order-info">商品总额:{{sum}}</view>
+<view class="order-info">促销优惠</view>
+<view class="order-info">品牌礼金</view>
+<view class="order-info">优惠券</view>
+</view>
+<view class="order-note">订单备注：<input /></view>
+</view>
+
+<!--底部-->
+<view class="bottom-box">
+  <view class="bottom">
+    <view class="left-left">共{{count}}件</view>
+    <view class="left">合计：</view>
+    <view class="center">￥{{sum}}</view>
+    <view class="right" bindtap="addOrder">提交订单</view>
+  </view>
+</view>
+

@@ -1,0 +1,30 @@
+<!--pages/cate/cate.wxml-->
+<!--index.wxml-->
+<!-- 搜索栏 -->
+<view class="search-view">
+<view class="search-input-view">
+<textarea placeholder="搜索" class="search-input-text"></textarea>
+</view>
+</view>
+<!-- 左侧栏 -->
+<view class="sroll-view-container">
+<scroll-view scroll-y="true" class="left-scroll-view" style="height: {{height}}px;">
+<block wx:for="{{cateList}}" wx:key="index">
+<view wx:if="{{active==index}}" class="left-scroll-view-item active" >{{item}}</view>
+<view wx:if="{{active!=index}}" class="left-scroll-view-item" bindtap="ChangeActive" id="{{index}}">{{item}}</view>
+</block>
+</scroll-view>
+<scroll-view scroll-y="true" style="height:{{height}}px" class="right-scroll-view">
+<block wx:for="{{productList}}" wx:key="index">
+<view class="right-scroll-view-item"  bindtap="todetail" data-value="{{index}}">
+<image src="{{item.product_faceImg}}" class="left-product-img" mode="aspectFit"></image>
+<view class="right-product-view">
+<view class="right-product-name">{{item.product_name}}</view>
+<view class="right-product-price">¥{{item.product_price}}</view>
+</view>
+</view>
+</block>
+</scroll-view>
+</view>
+<!-- 右边的商品 -->
+

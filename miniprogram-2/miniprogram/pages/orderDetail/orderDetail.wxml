@@ -1,0 +1,59 @@
+<!--pages/oederDetail/orderDetail.wxml-->
+<view class="order-menu">
+  <view class="menu" >
+  <view class="{{status==4?'choose-type':''}}" bindtap="getAll" data-type="4">全部</view>
+  <view class="{{status==-1?'choose-type':''}}" bindtap="chooseType" data-type="-1">待支付</view>
+  <view class="{{status==0?'choose-type':''}}" bindtap="chooseType" data-type="0">待发货</view>
+  <view class="{{status==1?'choose-type':''}}" bindtap="chooseType" data-type="1">待取货</view>
+  <view class="{{status==2?'choose-type':''}}" bindtap="chooseType" data-type="2">待评价</view>
+</view>
+</view>
+<view class="order-box">
+    <block wx:for="{{orderList}}">
+      <view class="one-order">
+        <view class="create-time">{{item.time}}</view>
+          <block wx:for="{{item.product}}" wx:for-item="product">
+          <view class="one-good">
+          <view>
+            <image class="good-img" src="{{product.product_faceImg}}"></image>
+          </view>
+          <view class="good-imformation">
+          <view class="imformation-top">
+          <view class="imformation-top-left">
+            <view class="left">{{product.product_name}}</view>
+          </view>
+          <view class="imformation-top-right">
+          <view class="right-top">
+            <view style="font-size: 22rpx;">￥</view>
+            <view>{{product.product_price}}</view>
+          </view>
+          <view style="display: flex;flex-direction: row;align-items: baseline;">
+            <view style="margin-right: 10rpx;">共{{product.product_number}}件</view>
+          </view>
+          </view>
+          </view>
+          <view class="imformation-center">
+            <view>需付款</view>
+            <view style="font-size: 22rpx;">￥</view>
+            <view style="font-size: 36rpx;">{{product.product_price*product.product_number}}</view>
+          </view>
+            <view class="option" wx:if="{{status==-1}}">
+              <view class="option-left" bindtap="Cancel">取消订单</view>
+              <view class="option-right" bindtap="toPay" data-id="{{product._id}}">继续付款</view>
+            </view>
+            <view class="option" wx:if="{{status==0}}">
+              <view class="option-right1" bindtap="changeAddress">修改地址</view>
+            </view>
+            <view class="option" wx:if="{{status==1}}">
+              <view class="option-right1" bindtap="confirmHarvest">确认收货</view>
+            </view>
+            <view class="option" wx:if="{{status==2}}">
+              <view class="option-right1" bindtap="toEvaluate">评价</view>
+            </view>
+          </view>
+          </view>
+          </block>
+        </view>
+    </block>
+</view>
+

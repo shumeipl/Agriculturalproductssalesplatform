@@ -1,0 +1,21 @@
+<view wx:if="{{flag}}">
+<view wx:for="{{businessList}}" wx:key="index" class="bussiness_info"
+bindtap="chat" data-index="{{index}}">
+<image src="{{item.userB_faceImg}}" class="bussiness_img"></image>
+<view wx:if="{{item.text_status==0}}" class="red-dot"></view>
+<view class="right-view">
+<view class="bussiness_nickname">{{item.userB_nickname}}</view>
+<view class="chat-text-view">
+<view class="chat_text">{{item.record[item.record.length-1].text}}</view>
+</view>
+</view>
+</view>
+</view>
+<view wx:if="{{!flag}}">
+  <view style="width: 100%; background-color: silver; " >
+<view style="margin-left: 150rpx;display: flex;align-items: center;height: 100rpx; ">
+请先登录~
+<view style="height: 50rpx; width: 100rpx; border-radius: 20rpx; border:1rpx solid black;display: flex;justify-content: center;align-items: center;margin-left: 50rpx;" bindtap="gomine">登录</view>
+</view>
+</view>
+</view>

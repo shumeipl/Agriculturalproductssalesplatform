@@ -1,0 +1,33 @@
+<view wx:if="{{id==1}}">
+<button open-type="contact">联系客服</button>
+</view>
+
+<view wx:if="{{id==2}}" class="container0">
+<form bindsubmit="Onsubmit">
+<view class="container1">
+  <text class="font_css">请具体描述<text class="stars_symbol">*</text></text>
+  <textarea placeholder="请输入：" name="describe" class="describe_input"></textarea>
+</view>
+<view class="container1">
+  <text class="font_css">联系方式<text class="stars_symbol">*</text></text>
+  <textarea placeholder="请输入：" name="contact_way" class="contact_way"></textarea>
+</view>
+<view class="container1">
+  <text class="font_css">选择照片(最多9张)<text class="stars_symbol">*</text></text>
+  <view wx:if="{{!hasImage}}">
+    <view class="hasnotimage" bindtap="chooseImage"><text style="display: flex; justify-content: center;align-items: center;">+</text></view>
+  </view>
+  <!-- 需要精化·再图片右上角弄一个icon红色叉叉，点击删除。如果没有满9个需要有加号。需要在data里面计数以及拼接
+  src -->
+  <view wx:if="{{hasImage}}" class="hasImage">
+    <view wx:for="{{src}}" wx:key="index" style="display: inline;">
+      <image src="{{item}}" class="choosed_img" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>
+<button class="submit" form-type="submit">提交</button>
+</form>
+</view>
+
+
+

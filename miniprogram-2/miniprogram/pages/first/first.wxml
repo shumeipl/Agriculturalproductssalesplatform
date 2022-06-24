@@ -1,0 +1,20 @@
+<!--pages/first/first.wxml-->
+<view wx:if="{{id==4}}">
+  <view style="font-weight: 600; color: grey;">待评价{{number}}条</view>
+<view class="bigbox">
+<view wx:for="{{purchase_products}}" wx:key="index" class="box1">
+<view class="left">
+<view style="display: flex;  align-items: center;">
+<image class="left-first-icon" src="../images/店铺.png"></image>
+<view class="left-first">{{item.shopper}}</view>
+</view>
+<image class="left-second" src="{{item.product_image}}" mode="aspectFit"></image>
+</view>
+<view class="right">
+<view class="right-first">{{item.product_name}}</view>
+<view class="right-second">{{item.purchase_content}}</view>
+</view>
+<view class="bottom" bindtap="gotoComment" id='{{index}}'>评价</view>
+</view>
+</view>
+</view>

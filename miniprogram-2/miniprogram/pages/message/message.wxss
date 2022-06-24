@@ -1,0 +1,36 @@
+.bussiness_img{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+}
+.bussiness_nickname{
+  font-weight: 600;
+}
+.bussiness_info{
+  display: flex;
+  height: 150rpx;
+  align-items: center;
+  border: 1rpx solid silver;
+}
+.chat_text{
+  font-size: smaller;
+  color: gray;
+  margin-top: 30rpx;
+  width: 400rpx;
+  height: 50rpx;
+  overflow: hidden;
+}
+.chat-text-view{
+  width: 500rpx;
+}
+.right-view{
+  margin-left: 30rpx;
+}
+.red-dot{
+  height: 30rpx;
+  width: 30rpx;
+  border-radius: 50%;
+  background-color: red;
+  margin-left: -30rpx;
+  margin-top: -80rpx;
+}

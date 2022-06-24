@@ -1,0 +1,21 @@
+<!--pages/search/search.wxml-->
+<view  class="search-wrap">
+<view class="search-box" bindtap="toSearch">
+<input bindinput="getValue" class="search-input" placeholder="请输入关键词"></input>
+<view bindtap="Search" class= style="margin-right:5rpx ;">搜索</view>
+</view>
+</view>
+
+<view class="show-goods">
+<block wx:for="{{goodsList}}">
+  <view class="goods-wrap" style="background-color: white;margin-top: 20rpx;border: 1rpx solid #efefef;border-radius: 20rpx;height: 530rpx;">
+  <image bindtap="toGoodsDetail" data-id="{{item._id}}" class="img" src="{{item.product_faceImg}}"></image>
+  <view class="goods-name"><text>{{item.product_name}}</text></view>
+  <view style="display: flex;">
+  <view class="goods-price" >{{item.product_price}}元</view>
+  
+</view>
+</view>
+</block>
+</view>
+

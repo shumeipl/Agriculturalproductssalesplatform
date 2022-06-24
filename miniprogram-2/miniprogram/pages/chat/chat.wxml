@@ -1,0 +1,53 @@
+<!--pages/message/message.wxml-->
+<view wx:if="{{flag}}">
+<view class="input_container">
+<textarea class="input_box" value='{{message}}'    placeholder="{{placeHolder}}" bindinput="input_message"></textarea>
+<view class="send_button" bindtap="publishChat">发送</view>
+</view>
+<!-- 第二部分，渲染聊天列表 -->
+<scroll-view scroll-y="true"
+scroll-into-view="{{scrollLast}}" style="height: {{height}}px;">
+<view wx:for="{{chatList}}" wx:key="this" class="user" id="item{{index + 1}}">
+<view class="left-user" wx:if="{{item.openid!=userA_openid}}">
+<view class="time">
+<view class="time-display" >{{item.time}}</view>
+</view>
+<view class="userB">
+<view style="width: 110rpx;">
+<image src="{{item.faceImg}}" class="left"></image>
+</view>
+<view class="left-right-view">
+<view class="left-right-nick-name">{{item.nickname}}</view>
+<view class="left-right-text">{{item.text}}</view>
+</view>
+</view>
+</view>
+<view class="right-userA" wx:if="{{userA_openid==item.openid}}">
+<view class="time">
+<view class="time-display" >{{item.time}}</view>
+</view>
+<view class="right_user">
+<view class="right-left-view">
+<view class="right-right_top">{{item.nickname}}</view>
+<view>
+<view class="right_bottom">
+<view class="right-bottom-text">{{item.text}}</view>
+</view>
+</view>
+</view>
+<view class="right-img-view">
+<image src="{{item.faceImg}}" class="right-img"></image>
+</view>
+</view>
+</view>
+</view >
+</scroll-view>
+</view>
+<view wx:if="{{!flag}}">
+<view style="width: 100%; background-color: silver; " >
+<view style="margin-left: 150rpx;display: flex;align-items: center;height: 100rpx; ">
+请先登录~
+<view style="height: 50rpx; width: 100rpx; border-radius: 20rpx; border:1rpx solid black;display: flex;justify-content: center;align-items: center;margin-left: 50rpx;" bindtap="gomine">登录</view>
+</view>
+</view>
+</view>

@@ -1,0 +1,57 @@
+/* pages/mine/mine.wxss */
+.userinfo{
+  width: 100%;
+  height: 400rpx;
+  border: 1rpx solid silver;
+  display: flex;
+  align-items: center;
+  background-color:	 #FFD700;
+}
+.userprofile{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.nickName{
+  margin-left: 50rpx;
+}
+.services{
+  display: flex;
+  flex-direction: column;
+  height: 200rpx;
+  width: 725rpx;
+  border-radius: 50rpx;
+  background-color:silver;
+  margin-top: -75rpx;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rpx;
+}
+.order{
+  display: flex;
+  flex-direction: row;
+}
+.service-image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.service-item{
+  display: flex;
+  width: 150rpx;
+  height: 150rpx;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.text{
+  font-size: small;
+}
+.more{
+  height: 300rpx;
+  border-radius: 50rpx;
+  margin-top: 20rpx;
+  background-color:silver;
+  display: flex;
+  width: 725rpx;
+  margin-left: 10rpx;
+}

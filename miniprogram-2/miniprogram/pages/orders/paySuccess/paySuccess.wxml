@@ -1,0 +1,4 @@
+<!--pages/orders/paySuccess/paySuccess.wxml-->
+<view>支付成功</view>
+<view>返回首页</view>
+<view>查看订单</view>

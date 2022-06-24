@@ -1,0 +1,26 @@
+<!--pages/mine/mine.wxml-->
+<view class="container1">
+  <view class="userinfo">
+      <image src="{{avatarUrl}}" mode="aspectFit" class="userprofile"></image>
+      <view class="nickName" bindtap="Btnuser">{{nickName}}</view>
+  </view>
+  <view class="services">
+    <navigator style="width:95%;text-align: right;" url="/pages/orderDetail/orderDetail?status=4">全部订单></navigator>
+    <view class="order">
+    <navigator wx:for="{{servicelist}}" wx:key="index" url="/pages/orderDetail/orderDetail?status={{item.id}}&title={{item.name}}">
+      <view class="service-item">
+          <image src="{{item.picture}}" class="service-image" ></image> 
+          <view class="text">{{item.name}}</view>
+       </view>
+    </navigator>
+  </view>
+  </view>
+<view class="more">
+  <navigator wx:for="{{more}}" wx:key="index" url="/pages/feedback/feedback?id={{item.id}}&title={{item.name}}">
+    <view class="service-item">
+    <image src="{{item.picture}}" class="service-image"></image>
+    <view class="text">{{item.name}}</view>
+  </view>
+  </navigator>
+</view>
+</view>

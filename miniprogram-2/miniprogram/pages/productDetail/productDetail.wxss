@@ -1,0 +1,117 @@
+/* pages/productDetail/productDetail.wxss */
+.goods-img{
+  width: 100%;
+  height: 500rpx;
+}
+
+.goods-price{
+  font-size: 50rpx;
+  color: red;
+  padding: 10rpx 20rpx;
+}
+.goods-title-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.goods-title{
+  padding: 10rpx 20rpx;
+  font-size: 36rpx;
+  width: 70%;
+}
+.goods-btn{
+  size: mini;
+  margin-right: 0%;
+  height: 60rpx;
+  background-color: white;
+}
+.goods-tap{
+  padding: 0rpx 20rpx;
+  font-size: 24rpx;
+  border: 1rpx solid rgb(124, 123, 123);
+  width: 100rpx;
+  margin: 0 20rpx;
+  text-align: center;
+}
+.detail-box{
+  border-top:4rpx solid rgb(155, 155, 155);
+  margin: 15rpx 0;
+}
+.detail-title{
+  padding: 20rpx 20rpx;
+  font-size: 36rpx;
+  font-weight: 1000;
+}
+.detail-content{
+  padding: 0 20rpx;
+}
+.detail-img{
+  margin: 20rpx 0;
+  width: 100%;
+}
+
+/*底部tabbar*/
+.tabbar{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 110rpx;
+  background-color: white;
+  border-top: 1rpx solid #efefef;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tabbar-left{
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 26rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  padding: 0 20rpx;
+}
+.index-img{
+  width:50rpx;
+  height: 45rpx;
+}
+.cart-num{
+  width:30rpx;
+  height: 30rpx;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left:190rpx;
+  top:0;
+  color:white;
+  font-size: 22rpx;
+}
+.tabbar-right{
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  margin-right: 40rpx;
+  line-height: 60rpx;
+}
+.btn-left{
+  background-color: rgb(255, 131, 15);
+  font-size: 28rpx;
+  width: 50%;
+  text-align: center;
+  border: 1rpx solid rgb(255, 131, 15);
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+.btn-right{
+  background-color: rgb(252, 33, 18);
+  font-size: 28rpx;
+  width: 50%;
+  text-align: center;
+  border: 1rpx solid rgb(252, 33, 18);
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}

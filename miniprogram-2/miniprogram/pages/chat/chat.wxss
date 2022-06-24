@@ -1,0 +1,118 @@
+/* pages/message/message.wxss */
+.input_container{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background-color:gray;
+  position: fixed;
+  bottom: 0rpx;
+}
+.input_box{
+  border: 1rpx solid silver;
+  height: 60rpx;
+  width:600rpx;
+  margin-left: 30rpx;
+  border-radius: 20rpx;
+  background-color: whitesmoke;
+  color: black;
+}
+.send_button{
+  border:1rpx solid silver;
+  margin-left: 10rpx;
+  width: 100rpx;
+  background-color: 	#2E8B57;
+  color:white;
+  border-radius: 10rpx;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58rpx;
+}
+.left{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  border:5rpx solid gold;
+  position: relative;
+}
+
+.time{
+  height: 50rpx;
+  width: 750rpx;
+  justify-content: center;
+}
+.time-display{
+  display: flex;
+  justify-content: center;
+  color: grey;
+  font-size: small;
+}
+.userB{
+  display: flex;
+  width: 730rpx;
+  margin: 0 auto;
+  margin-top: 25rpx;
+}
+.left-right-view{
+  margin-left: 10rpx;
+  word-wrap: break-word;
+  margin-right: 115rpx;
+}
+.left-right-nick-name{
+  font-weight: 550;
+  margin-top: 5rpx;
+}
+.left-right-text{
+  margin-top: 15rpx;
+  background-color:white;
+  padding: 10rpx;
+  border: 1rpx solid grey;
+  border-radius: 20rpx;
+  word-break:break-all
+}
+.right_user{
+  margin-right: 10rpx;
+  display: flex;
+  margin-top: 25rpx;
+  margin-left: 115rpx;
+}
+.right-left-view{
+  width: 600rpx;
+}
+.right-img{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  border:5rpx solid gold;
+}
+.right-img-view{
+  display: flex;
+  margin-left: auto;
+}
+.right-right_top{
+  font-weight: 550;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5rpx;
+}
+.right_bottom{
+  display: flex;
+  justify-content: flex-end;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+
+}
+.right-bottom-text{
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 10rpx;
+  border: 1rpx solid silver;
+  word-break:break-all
+}
+.left-user{
+  width: 640rpx;
+  margin-left: 10rpx;
+  height: auto;
+}

@@ -1,0 +1,78 @@
+.sroll-view-container{
+  display: flex;
+}
+.left-scroll-view{
+  width: 120px;
+}
+.left-scroll-view-item{
+  /* 背景颜色为浅灰色 */
+  background-color:	#D3D3D3;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30rpx;
+  }
+.active{
+  background-color: #FFFFFF;
+  position: relative;
+}
+.active::before{
+  content: ' ';
+  display: block;
+  width: 3px;
+  height: 30px;
+  background-color: #c00000;
+  position:absolute;
+  top: 50%;
+  left: 4%;
+  /* 让它再往回走它自己的百分之50 */
+  transform: translateY(-50%);
+}
+.search-view{
+  width: 100%;
+  height: 150rpx;
+  background-color: #c00000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.search-input-view{
+  display: flex;
+  height: 60rpx;
+  background-color: white;
+  border-radius: 25rpx;
+  margin-top: 60rpx;
+}
+.search-input-text{
+  height: 60rpx; 
+  width: 680rpx;
+  display: flex;
+  color: black;
+  justify-content: center;
+  margin-top:1% ;
+}
+.right-scroll-view-item{
+  /* 背景颜色为浅灰色 */
+ height:250rpx ;
+ display: flex;
+ align-items: center;
+ margin-top: 10rpx;
+}
+.left-product-img{
+  width: 400rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+  border:0.5rpx solid silver;
+}
+.right-product-name{
+  font-weight: 500;
+  font-size: 30rpx;
+}
+.right-product-describe{
+  margin-top: 10rpx;
+  font-size: small;
+}
+.right-product-price{
+  margin-top: 70rpx;
+  color: 	red;
+}

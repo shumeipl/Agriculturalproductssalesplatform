@@ -1,0 +1,54 @@
+<!--pages/productDetail/productDetail.wxml-->
+<!--商品详情轮播图-->
+<view>
+<swiper indicator-dots="true" indicator-color="rgb(161, 250, 139)" indicator-active-color="rgb(252, 218, 24)" autoplay="true" interval="2000" circular="true" class="goods-img">
+  <block wx:for="{{productDetail.product_Img}}" wx:key="key">
+      <swiper-item>
+        <image style="width: 100%;" mode="cover" src="{{item}}"></image>
+      </swiper-item>
+  </block>
+</swiper>
+</view>
+
+<!--商品信息-->
+<view class="goods-box">
+  <view class="goods-price">￥{{productDetail.product_price}}</view>
+    <view class="goods-title-box">
+    <view class="goods-title">{{productDetail.product_name}}</view>
+    <button size="mini" style="font-size: 32rpx;" class="goods-btn" open-type="share">分享</button>
+  </view>
+  <view class="goods-tap">产自湖南</view>
+</view>
+<view class="detail-box">
+  <view class="detail-title">商品详情</view>
+  <view class="detail-content">
+    <rich-text nodes="{{productDetail.product_describe}}"></rich-text>
+  </view>
+  <block wx:for="{{productDetail.product_Img}}" wx:key="key">
+    <image mode="cover" class="detail-img" src="{{item}}"></image>
+  </block>
+</view>
+<!--底部tabBar-->
+<view class="tabbar">
+  <view class="tabbar-left">
+  <view bindtap="toHome">
+    <image class="index-img" src="../images/首页1.png"></image>
+    <view>首页</view>
+  </view>
+  <view class="tabbar-left-center" bindtap="tochat">
+    <image class="index-img" src="http://tmp/mne29h72pWAa929bf43eb17586f81ebfc92149b629e8.png"></image>
+    <view>客服</view>
+  </view>
+  <view bindtap="toShopcart">
+    <image  class="index-img" src="../images/购物车1.png"></image>
+    <view>购物车</view>
+  </view>
+  </view>
+  <view class="tabbar-right">
+    <view class="btn-left" size="mini" bindtap="addShopcart">加入购物车</view>
+    <view size="mini" class="btn-right" bindtap="toOrder">立即购买</view>
+  </view>
+</view>
+
+
+
